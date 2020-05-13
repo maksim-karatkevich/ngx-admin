@@ -20,8 +20,9 @@ jobs:
         with:
           ref: demo
       - run: npm install
+      - run: mkdir test
       - run: ls
-      - run: pwd
       - run: npm run build:prod
-      - run: cd dist  
-      - run: ls
+      - run: cp -r dist/. test
+      - run: cd test
+      - run: ls  

@@ -19,8 +19,4 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: demo
-      - run: npm install
-      - run: npm run build:prod
-      - run: rsync -r dist/. "${{ secrets.ADDRESS }}":~/views/admin/ngx-demo/dist
-
-
+      - run: echo test

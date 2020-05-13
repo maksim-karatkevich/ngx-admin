@@ -20,5 +20,8 @@ jobs:
         with:
           ref: demo
       - run: npm install
-      - run: npm install -g angular-cli
+      - run: ls
+      - run: pwd
       - run: npm run build:prod
+      - run: cd dist  
+      - run: ls

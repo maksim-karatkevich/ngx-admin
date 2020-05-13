@@ -20,9 +20,7 @@ jobs:
         with:
           ref: demo
       - run: npm install
-      - run: mkdir test
-      - run: ls
       - run: npm run build:prod
-      - run: cp -r dist/. test
-      - run: cd test
-      - run: ls  
+      - run: rsync -r dist/. "${{ secrets.ADDRESS }}":~/views/admin/ngx-demo/dist
+
+

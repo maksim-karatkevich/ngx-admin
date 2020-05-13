@@ -19,5 +19,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: demo
+      - run: npm install
       - run: npm install -g angular-cli
       - run: npm run build:prod

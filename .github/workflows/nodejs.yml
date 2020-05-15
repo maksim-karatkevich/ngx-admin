@@ -15,4 +15,4 @@ jobs:
         with:
           ref: demo
       - run: npm install
-      - run: run docs:gh-pages
+      - run: npm run docs:gh-pages

@@ -4,8 +4,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - master
-      - demo
+      - /demo
   repository_dispatch:
     types: deploy-docs
   

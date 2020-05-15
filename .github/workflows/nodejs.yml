@@ -8,7 +8,7 @@ on:
     paths:
       - 'docs/**'
   repository_dispatch:
-    types: deploy-docs
+    types: docs
 
 jobs:
   build:

@@ -5,8 +5,8 @@ on:
   push:
     branches:
       - demo
-      path:
-        - 'docs'
+    path:
+      - 'docs/**'
   repository_dispatch:
     types: deploy-docs
 

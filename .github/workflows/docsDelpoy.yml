@@ -17,8 +17,7 @@ jobs:
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
       - uses: actions/checkout@v2
-      - run: sudo Trigger!
-#         with:
-#           ref: demo
-#       - run: npm install
-#       - run: npm run docs:gh-pages
+        with:
+          ref: demo
+      - run: npm install
+      - run: npm run docs:gh-pages

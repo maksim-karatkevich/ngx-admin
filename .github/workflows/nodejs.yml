@@ -3,8 +3,8 @@ name: Deploy docs
 
 on:
   push:
-    branches-ignore:
-      - master
+    branches:
+      - 'demo'
   repository_dispatch:
     types: deploy-docs
   

@@ -3,10 +3,8 @@ name: Deploy docs
 
 on:
   push:
-    branches:
-      - demo
-      - 'docs/**'
     path:
+      - '**'
       - 'docs/**'
   repository_dispatch:
     types: deploy-docs

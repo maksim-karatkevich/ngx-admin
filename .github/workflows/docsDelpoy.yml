@@ -5,10 +5,10 @@ on:
   push:
     branches:
       - demo
+      - docs/**
   repository_dispatch:
     types: deploy-docs
 
-#       - 'docs/**'
 jobs:
   build:
     runs-on: ubuntu-latest

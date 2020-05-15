@@ -2,11 +2,12 @@
 name: Deploy docs
 
 on:
+  push:
+    branches:
+      - master
   repository_dispatch:
     types: deploy-docs
-  push:
-    branches:    
-      - demo
+  
 #       - 'docs/**'  
 jobs:
   build:

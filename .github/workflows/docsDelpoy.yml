@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - demo
+      - 'docs/**'
     path:
       - 'docs/**'
   repository_dispatch:

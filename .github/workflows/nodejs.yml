@@ -4,7 +4,10 @@ name: Deploy docs
 on:
   repository_dispatch:
     types: deploy-docs
-
+  push:
+    branches:    
+      - demo
+      - 'docs/**'  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +15,8 @@ jobs:
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
       - uses: actions/checkout@v2
-        with:
-          ref: demo
-      - run: npm install
-      - run: npm run docs:gh-pages
+      - run: sudo Trigger!
+#         with:
+#           ref: demo
+#       - run: npm install
+#       - run: npm run docs:gh-pages

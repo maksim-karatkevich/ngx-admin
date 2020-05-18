@@ -22,7 +22,8 @@ jobs:
       - run: npm install  
       - run: git config --global user.email "m.karatkevich@akveo.com"
       - run: git config --global user.name "Maksim Karatkevich"
+      - run: npm run docs:gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}; 
-      - run: npm run docs:gh-pages
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }};
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }};

@@ -27,5 +27,4 @@ jobs:
           npm install --silent
           git config --global user.email "m.karatkevich@akveo.com"
           git config --global user.name "Maksim Karatkevich"
-          ngh
           npm run docs:gh-pages

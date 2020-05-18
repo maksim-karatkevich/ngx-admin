@@ -21,7 +21,7 @@ jobs:
           ref: demo
           repo-token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: npm install
       - run: npm install -g ngh 
       - run: export NGH_ACCESS_TOKEN="${{ secrets.GH_TOKEN }}"

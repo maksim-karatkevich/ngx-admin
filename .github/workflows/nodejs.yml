@@ -27,4 +27,5 @@ jobs:
           npm install --silent
           git config --global user.email "github-action@akveo.com"
           git config --global user.name "Github Action"
+          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           npm run docs:gh-pages

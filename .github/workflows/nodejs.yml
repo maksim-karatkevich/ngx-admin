@@ -19,14 +19,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: demo
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - run: npm install
-      - run: npm install -g ngh 
-      - run: export NGH_ACCESS_TOKEN="${{ secrets.GH_TOKEN }}"
-      - run: export GH_TOKEN="${{ secrets.GH_TOKEN }}"
-      - run: ngh --no-silent  
+      - run: npm install  
       - run: git config --global user.email "m.karatkevich@akveo.com"
       - run: git config --global user.name "Maksim Karatkevich"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
       - run: npm run docs:gh-pages

@@ -21,7 +21,7 @@ jobs:
           ref: demo
       - run: npm install
       - run: npm install -g ngh 
-      - run: sudo ngh  
+      - run: ngh --no-silent  
       - run: export NGH_ACCESS_TOKEN="${{ secrets.GH_TOKEN }}"
       - run: export GH_TOKEN="${{ secrets.GH_TOKEN }}"
       - run: npm run docs:gh-pages
